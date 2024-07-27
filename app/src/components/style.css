@@ -1,0 +1,86 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form p {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+form input,
+select,
+textarea {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+form button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: black;
+    color: yellow;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns button {
+    width: 20%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(19, 19, 165);
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.job-listings{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.job-card{
+    border: 1px solid rgb(105, 100, 100);
+    border-radius: 5px;
+    width: 20%;
+    padding: 10px ;
+}
+.job-card p{
+    margin-bottom: 5px;
+}
+.job-card button{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(19, 19, 165);
+    color: white;
+    padding: 10px;
+    
+}
+
