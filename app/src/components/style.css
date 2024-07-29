@@ -1,3 +1,20 @@
+.back {
+    background-color: rgb(43, 39, 39);
+    color: white;
+}
+
+.bg .brand {
+    font-family: "Lakki Reddy", serif;
+    text-decoration: none;
+    color: rgb(241, 205, 26);
+    font-size: 36px;
+}
+
+.link li {
+    color: rgb(241, 205, 26);
+    font-size: 16px;
+}
+
 .login {
     display: flex;
     justify-content: center;
@@ -84,3 +101,27 @@ form button {
     
 }
 
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 45%; /* Adjust the width as needed */
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-group p {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}

@@ -69,13 +69,19 @@ app.post('/login', async (req, res) => {
 app.post('/post', async (req, res) => {
     try {
         const { title, company, location, salary, schedule, skills, description, qualification } = req.body;
+        const skillsArray = Array.isArray(skills) ? skills : [skills];
+
+        if (!skillsArray.length) {
+            return res.status(400).json({ message: 'Skills are required' });
+        }
+
         const newJob = new Jobs({
             title: title,
             company: company,
             location: location,
             salary: salary,
             schedule: schedule,
-            skills: skills,
+            skills: skillsArray,
             description: description,
             qualification: qualification
         });
@@ -88,6 +94,33 @@ app.post('/post', async (req, res) => {
     }
 })
 
+app.get('/getjobs', async (req, res) => {
+    try {
+        let jobs = await Jobs.find();
+        if (jobs.length > 0) {
+            const formattedJobs = jobs.map(job => {
+                return {
+                    _id: job._id,
+                    title: job.title,
+                    company: job.company,
+                    location: job.location,
+                    salary: job.salary,
+                    schedule: job.schedule,
+                    skills: job.skills,
+                    description: job.description,
+                    qualification: job.qualification
+                }
+            })
+            res.json(formattedJobs)
+        }
+        else {
+            res.json({ result: 'No Jobs Found' });
+        }
+    } catch (error) {
+        console.error('Error retrieving data:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+})
 
 app.listen(port, () => {
     console.log(`Server is listening at http://localhost:${port}`);
