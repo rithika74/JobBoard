@@ -79,7 +79,9 @@ form button {
 
 .job-listings{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 20px 40px;
     align-items: center;
 }
 
@@ -88,6 +90,7 @@ form button {
     border-radius: 5px;
     width: 20%;
     padding: 10px ;
+    margin: 20px;
 }
 .job-card p{
     margin-bottom: 5px;
@@ -99,6 +102,29 @@ form button {
     color: white;
     padding: 10px;
     
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search input{
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 30%;
+    margin-right: 20px;
+}
+
+.search button{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(19, 19, 165);
+    padding: 5px 10px;
+    color: white;
 }
 
 .checkbox-group {
